@@ -12,6 +12,11 @@ import Button from "@mui/material/Button";
 import "./TableComp.css";
 
 const TableComp = (props: any) => {
+  const { getItems, deleteItem } = props;
+
+  const handleClick = (index: number) => {
+    deleteItem(index);
+  }
 
   return (
     <TableContainer component={Paper}>
@@ -24,6 +29,18 @@ const TableComp = (props: any) => {
           </TableRow>
         </TableHead>
         <TableBody>
+        {getItems().map((row: Item, index: number) => (
+            <TableRow
+              key={row.name}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.name}
+              </TableCell>
+              <TableCell>{row.description}</TableCell>
+              <TableCell><Button variant="contained" onClick={() => handleClick(index)}>Delete item</Button></TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     </TableContainer>
