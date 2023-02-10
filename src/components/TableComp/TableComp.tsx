@@ -57,4 +57,14 @@ const TableComp = (props: any) => {
   );
 };
 
+TableComp.propTypes = {
+  getItems: PropTypes.func,
+  deleteItem: PropTypes.func,
+};
+
+TableComp.defaultProps = {
+  getItems: () => {},
+  deleteItem: () => {}
+};
+
 export default TableComp;

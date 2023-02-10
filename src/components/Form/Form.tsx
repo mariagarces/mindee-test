@@ -62,4 +62,12 @@ const Form = (props: any) => {
   );
 };
 
+Form.propTypes = {
+  setItem: PropTypes.func
+};
+
+Form.defaultProps = {
+  setItem: () => {},
+};
+
 export default Form;
