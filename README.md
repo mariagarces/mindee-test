@@ -12,11 +12,11 @@ I created 2 components: Form and TableComp. It was better to create them conside
 ### Form
 It includes the inputs so the user can write the items and the submit button to add them in the table.
 ### TableComp
-It involves the table, it means a header and each row with the information that was submitted and a button to delete it.
+It has the table, it means a header, each row with the information that was submitted and a button to delete it.
 
-## Models: 
+## Models
 It has the Item class. Even thought it's a program that maybe is not going to grow to be more complex, I decided to make this class considering a global dynamic of what is better to have in case an instance will need new methods or change the state.
-## Pages:
+## Pages
 It has the Home page where the 2 components are included. This component manage the state of the items and make the communication with both components.
 
 There aren't many elements but it was important to use this scaffolding to guarantee an organised and understandable project.
