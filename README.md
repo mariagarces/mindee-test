@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Items Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This projet solves the internship test for Mindee. It has the main functionalities:
+- submit a form
+- display information gathered in a table
 
-## Available Scripts
+In addition, it was developed some tests using Jest and also, it was made a basic interface using Material-UI, as requested. Also, I deployed the app in github pages because it has become popular and easy to use. You can see the result in: https://mariagarces.github.io/mindee-test/
 
-In the project directory, you can run:
+The project is divided in 3 main folders, each one has its main purpose as explain below:
+## Components
+I created 2 components: Form and TableComp. It was better to create them considering granularity and independence.
+### Form
+It includes the inputs so the user can write the items and the submit button to add them in the table.
+### TableComp
+It involves the table, it means a header and each row with the information that was submitted and a button to delete it.
 
-### `npm start`
+## Models: 
+It has the Item class. Even thought it's a program that maybe is not going to grow to be more complex, I decided to make this class considering a global dynamic of what is better to have in case an instance will need new methods or change the state.
+## Pages:
+It has the Home page where the 2 components are included. This component manage the state of the items and make the communication with both components.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+There aren't many elements but it was important to use this scaffolding to guarantee an organised and understandable project.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## What would I do if I had more time?
+I would have put more effort in the look of the page or maybe add other functionalities to the table, like allow to organise the rows by some parameter. Another thing would have been to add accesibility.
